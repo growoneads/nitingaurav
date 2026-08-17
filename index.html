@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Join Nitin Muraka's free stock market education community.">
+<title>NITIN MURAKA | Official Community</title>
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #f6f0ff;
+  background: #0B0714;
+}
+
+.wrapper { width: 100%; max-width: 420px; }
+
+.card {
+  background: #140E22;
+  border: 1px solid rgba(163, 230, 53, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6);
+}
+
+/* Wave-top header - fresh visual element */
+.wave-header {
+  position: relative;
+  height: 76px;
+  background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+}
+.wave-header svg { position: absolute; bottom: -1px; left: 0; width: 100%; height: 26px; }
+
+.avatar-wrap { display: flex; justify-content: center; margin-top: -38px; position: relative; }
+.avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #140E22;
+  background: #241a3d;
+  display: block;
+}
+
+.body-pad { padding: 10px 22px 22px; text-align: center; }
+
+h1 { font-size: 20px; font-weight: 900; color: #ffffff; margin: 4px 0 3px; }
+.subtitle { font-size: 12px; color: #c4b5fd; margin-bottom: 16px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(163, 230, 53, 0.1);
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  color: #c3f27a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.plain-stats {
+  font-size: 11.5px;
+  color: #ded6f5;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.plain-stats b { color: #A3E635; }
+.plain-stats .sep { color: #3a3055; margin: 0 7px; }
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #e5dcf7;
+}
+.check-item i { color: #A3E635; font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+
+/* CTA - word "Telegram" avoided in visible text, uses "Community" instead */
+.cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #17A3E8 0%, #0088CC 45%, #006BA3 100%);
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  box-shadow: 0 16px 36px rgba(0, 136, 204, 0.5), inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 6px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.15s ease, filter 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 62px;
+}
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+}
+.cta-btn:active { transform: scale(0.97); }
+.cta-btn:hover { filter: brightness(1.06); }
+
+.cta-icon-badge {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cta-icon-badge i { font-size: 17px; }
+
+.cta-text-wrap { position: relative; text-align: left; }
+.cta-text-wrap .main-txt { display: block; font-size: 14.5px; font-weight: 900; line-height: 1.25; }
+.cta-text-wrap .sub-txt { display: block; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+.disclaimer {
+  margin-top: 16px;
+  font-size: 9.5px;
+  line-height: 1.6;
+  color: #4a3d63;
+  text-align: center;
+  padding: 12px 4px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+</style>
+
+</head>
+<body>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1663614841583730');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1663614841583730&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<div class="wrapper">
+  <div class="card">
+
+    <div class="wave-header">
+      <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0,15 C100,30 300,0 400,15 L400,30 L0,30 Z" fill="#140E22"/></svg>
+    </div>
+
+    <div class="avatar-wrap">
+      <img src="ca.jpg" class="avatar" alt="Profile Image" width="76" height="76" decoding="async" fetchpriority="high">
+    </div>
+
+    <div class="body-pad">
+      <h1>NITIN MURAKA</h1>
+      <p class="subtitle">Stock Market &amp; Financial Educator</p>
+
+      <div class="badge"><i class="fas fa-shield-halved"></i> Verified Educational Community</div>
+
+      <div class="plain-stats">
+        <b>100%</b> Beginner <span class="sep">•</span> <b>Daily</b> Updates <span class="sep">•</span> <b>Free</b> Access
+      </div>
+
+      <div class="checklist">
+        <div class="check-item"><i class="fas fa-circle-check"></i> Daily market updates &amp; trading insights</div>
+        <div class="check-item"><i class="fas fa-circle-check"></i> Free educational content, no hidden fees</div>
+        <div class="check-item"><i class="fas fa-circle-check"></i> Easy explanations built for beginners</div>
+        <div class="check-item"><i class="fas fa-circle-check"></i> Full, active community support</div>
+      </div>
+
+      <a class="cta-btn" id="joinBtn" href="https://t.me/+KJt-QmHwxqZlNjE1" rel="noopener noreferrer">
+        <span class="cta-icon-badge"><i class="fas fa-paper-plane"></i></span>
+        <span class="cta-text-wrap">
+          <span class="main-txt">Join Free Community</span>
+          <span class="sub-txt">Instant access • 100% free</span>
+        </span>
+      </a>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We do not provide any financial advice and do not guarantee any profits. Stock market investments carry risk — please do your own research before making any investment decisions.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const groupLink = "https://t.me/+KJt-QmHwxqZlNjE1";
+  const joinBtn = document.getElementById("joinBtn");
+
+  joinBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (window.fbq) {
+      fbq('track', 'Subscribe', { content_name: 'Community', button_click: true }, { eventID: 'community_subscribe_' + Date.now() });
+    }
+    setTimeout(() => {
+      window.location.href = groupLink;
+    }, 200);
+  });
+})();
+</script>
+
+</body>
+</html>
